@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel administrativo — Chaveiro Aliança BH</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <!-- Login -->
+  <section class="login" id="login-view" hidden>
+    <form class="login__card" id="login-form">
+      <img src="/img/favicon.svg" alt="" width="56" height="56">
+      <h1>Painel administrativo</h1>
+      <p>Chaveiro Aliança BH</p>
+      <label>Usuário <input name="username" autocomplete="username" required></label>
+      <label>Senha <input name="password" type="password" autocomplete="current-password" required></label>
+      <p class="form-error" id="login-error" hidden></p>
+      <button class="btn btn--primary btn--block" type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <!-- Troca de senha obrigatória -->
+  <section class="login" id="password-view" hidden>
+    <form class="login__card" id="first-password-form">
+      <h1>Defina uma nova senha</h1>
+      <p>Por segurança, troque a senha inicial antes de usar o painel.</p>
+      <label>Senha atual <input name="current" type="password" autocomplete="current-password" required></label>
+      <label>Nova senha <small>(mínimo 8 caracteres)</small> <input name="next" type="password" autocomplete="new-password" minlength="8" required></label>
+      <label>Repita a nova senha <input name="confirm" type="password" autocomplete="new-password" minlength="8" required></label>
+      <p class="form-error" hidden></p>
+      <button class="btn btn--primary btn--block" type="submit">Salvar nova senha</button>
+    </form>
+  </section>
+
+  <!-- App -->
+  <div class="app" id="app-view" hidden>
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <img src="/img/favicon.svg" alt="" width="36" height="36">
+        <div><strong>Aliança BH</strong><span id="who">Painel administrativo</span></div>
+      </div>
+      <nav class="sidebar__nav" id="menu">
+        <button data-view="servicos" class="is-active">Serviços</button>
+        <button data-view="produtos">Produtos</button>
+        <button data-view="textos">Textos do site</button>
+        <button data-view="contato">Contato e WhatsApp</button>
+        <button data-view="conta">Minha conta</button>
+      </nav>
+      <div class="sidebar__foot">
+        <a class="btn btn--ghost btn--block" href="/" target="_blank" rel="noopener">Ver site ↗</a>
+        <a class="btn btn--ghost btn--block" href="/dev" id="dev-link" hidden>Painel do desenvolvedor</a>
+        <button class="btn btn--link btn--block" id="logout">Sair</button>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="alert" id="wa-alert" hidden>
+        <span><strong>[NÚMERO DO WHATSAPP]</strong> ainda não configurado — os pedidos de orçamento não chegam à empresa.</span>
+        <button class="btn btn--sm btn--primary" data-goto="contato">Configurar agora</button>
+      </div>
+      <div id="view"></div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/admin/admin.js" defer></script>
+</body>
+</html>

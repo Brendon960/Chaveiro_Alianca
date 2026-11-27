@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" role="img" aria-label="Chave automotiva inteligente">
+<defs>
+<linearGradient id="hb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34496A"/><stop offset=".45" stop-color="#16243A"/><stop offset="1" stop-color="#070F1C"/></linearGradient>
+<linearGradient id="hs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity=".25"/><stop offset=".5" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<linearGradient id="hm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4F7FB"/><stop offset=".5" stop-color="#B3BFCD"/><stop offset="1" stop-color="#6F7C8E"/></linearGradient>
+<radialGradient id="hbtn" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#2E4366"/><stop offset="1" stop-color="#0C1729"/></radialGradient>
+</defs>
+<g stroke="#FFC20E" stroke-opacity=".35" stroke-width="2.5" fill="none" stroke-linecap="round">
+<path d="M40 560 h120 l40 -40 h80"/><path d="M60 140 h90 l30 30 h60"/><path d="M780 610 h-110 l-40 -40 h-50"/><path d="M760 90 h-80 l-30 30"/>
+</g>
+<g fill="#FFC20E"><circle cx="280" cy="520" r="6"/><circle cx="240" cy="170" r="6"/><circle cx="580" cy="570" r="6"/><circle cx="650" cy="120" r="6"/></g>
+<g transform="translate(400 360) rotate(-18)">
+  <path d="M-34 250 H34 V430 L0 462 L-34 430 Z" fill="url(#hm)"/>
+  <path d="M-34 300 h18 v18 h-18z M-34 350 h22 v16 h-22z M-34 395 h16 v16 h-16z" fill="#56637A"/>
+  <path d="M-6 260 V440" stroke="#ffffff" stroke-opacity=".5" stroke-width="3"/>
+  <rect x="-150" y="-290" width="300" height="560" rx="140" fill="url(#hb)" stroke="#4A6184" stroke-width="4"/>
+  <rect x="-150" y="-290" width="300" height="560" rx="140" fill="url(#hs)"/>
+  <rect x="-122" y="-262" width="244" height="504" rx="114" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="3"/>
+  <circle cx="0" cy="-226" r="22" fill="#050C18" stroke="#4A6184" stroke-width="5"/>
+  <rect x="-58" y="-180" width="116" height="10" rx="5" fill="#FFC20E"/>
+  <g>
+    <circle cx="0" cy="-90" r="48" fill="url(#hbtn)" stroke="#FFC20E" stroke-width="5"/>
+    <path d="M-16 -94 h32 v24 h-32z M-10 -94 v-10 a10 10 0 0 1 20 0 v10" fill="none" stroke="#FFC20E" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="0" cy="30" r="48" fill="url(#hbtn)" stroke="#8FA0B8" stroke-width="5"/>
+    <path d="M-16 26 h32 v24 h-32z M-10 26 v-10 a10 10 0 0 1 20 0" fill="none" stroke="#C9D3E0" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="0" cy="145" r="40" fill="url(#hbtn)" stroke="#8FA0B8" stroke-width="5"/>
+    <path d="M-20 158 l6 -22 h28 l6 22 z M-24 158 h48" fill="none" stroke="#C9D3E0" stroke-width="5" stroke-linejoin="round"/>
+  </g>
+</g>
+<g transform="translate(590 230) rotate(-35)" fill="none" stroke="#FFC20E" stroke-width="10" stroke-linecap="round">
+  <path d="M0 -30 a44 44 0 0 1 0 60"/><path d="M32 -62 a88 88 0 0 1 0 124" opacity=".65"/><path d="M64 -94 a132 132 0 0 1 0 188" opacity=".35"/>
+</g>
+</svg>

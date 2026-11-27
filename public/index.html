@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{SEO_TITLE}}</title>
+  <meta name="description" content="{{SEO_DESCRIPTION}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{SEO_TITLE}}">
+  <meta property="og:description" content="{{SEO_DESCRIPTION}}">
+  <meta property="og:image" content="/img/hero-chave-inteligente.svg">
+  <meta name="theme-color" content="#0A1F3D">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v={{V}}">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a class="brand" href="#topo" aria-label="Início">
+        <span class="brand__logo" id="brand-logo"></span>
+        <span class="brand__name" data-s="businessName"></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#orcamento">Orçamento rápido</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="header__actions">
+        <button type="button" class="btn btn--primary btn--sm header__cta" data-quote data-origin="cabecalho">
+          <span class="i" data-icon="wa"></span><span class="header__cta-text">Orçamento</span>
+        </button>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="eyebrow eyebrow--light" data-t="heroEyebrow"></span>
+          <h1 class="hero__title" data-t="heroTitle"></h1>
+          <p class="hero__subtitle" data-t="heroSubtitle"></p>
+          <div class="hero__actions">
+            <button type="button" class="btn btn--primary btn--lg" data-quote data-origin="hero">
+              <span class="i" data-icon="wa"></span>
+              <span data-t="heroPrimaryButton"></span>
+            </button>
+            <a class="btn btn--ghost btn--lg" href="#servicos" data-t="heroSecondaryButton"></a>
+          </div>
+          <ul class="hero__badges" id="hero-badges"></ul>
+        </div>
+        <div class="hero__media">
+          <div class="hero__glow" aria-hidden="true"></div>
+          <img id="hero-image" src="/img/hero-chave-inteligente.svg" alt="Chave automotiva inteligente" width="800" height="700" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <header class="section__head">
+          <span class="eyebrow" data-t="servicesEyebrow"></span>
+          <h2 class="section__title" data-t="servicesTitle"></h2>
+          <p class="section__subtitle" data-t="servicesSubtitle"></p>
+        </header>
+        <div class="services" id="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section section--navy" id="como-funciona">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" data-t="stepsTitle"></h2>
+        </header>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </section>
+
+    <!-- ORÇAMENTO RÁPIDO -->
+    <section class="section section--light" id="orcamento">
+      <div class="container quick">
+        <div class="quick__intro">
+          <span class="eyebrow" data-t="quickEyebrow"></span>
+          <h2 class="section__title" data-t="quickTitle"></h2>
+          <p class="section__subtitle" data-t="quickSubtitle"></p>
+        </div>
+        <form class="quick__card form" data-quote-form data-origin="orcamento-rapido" novalidate>
+          <div class="form__row">
+            <label>Marca do veículo
+              <input name="brand" autocomplete="off" placeholder="Ex.: Volkswagen">
+            </label>
+            <label>Modelo
+              <input name="model" autocomplete="off" placeholder="Ex.: Gol">
+            </label>
+          </div>
+          <div class="form__row">
+            <label>Ano
+              <input name="year" inputmode="numeric" maxlength="9" placeholder="Ex.: 2018">
+            </label>
+            <label>Serviço desejado
+              <select name="service"></select>
+            </label>
+          </div>
+          <div class="quick__preview">
+            <span class="quick__preview-label"><span class="i" data-icon="wa"></span> Prévia da mensagem</span>
+            <pre data-preview aria-live="polite"></pre>
+          </div>
+          <button type="submit" class="btn btn--wa btn--lg btn--block">
+            <span class="i" data-icon="wa"></span> Abrir WhatsApp com a mensagem
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" data-t="differentialsTitle"></h2>
+        </header>
+        <div class="features" id="features"></div>
+      </div>
+    </section>
+
+
+    <!-- CATÁLOGO -->
+    <section class="section" id="catalogo">
+      <div class="container">
+        <header class="section__head">
+          <span class="eyebrow" data-t="catalogEyebrow"></span>
+          <h2 class="section__title" data-t="catalogTitle"></h2>
+          <p class="section__subtitle" data-t="catalogSubtitle"></p>
+        </header>
+        <div class="tabs" id="catalog-tabs" role="tablist" aria-label="Filtrar por categoria"></div>
+        <div class="products" id="products"></div>
+        <p class="empty-filter" id="empty-filter" hidden>Nenhum produto nesta categoria no momento.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <div>
+          <h2 data-t="ctaTitle"></h2>
+          <p data-t="ctaText"></p>
+        </div>
+        <button type="button" class="btn btn--navy btn--lg" data-quote data-origin="faixa-final">
+          <span class="i" data-icon="wa"></span>
+          <span data-t="ctaButton"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato">
+      <div class="container">
+        <header class="section__head">
+          <span class="eyebrow" data-t="contactEyebrow"></span>
+          <h2 class="section__title" data-t="contactTitle"></h2>
+          <p class="section__subtitle" data-t="contactSubtitle"></p>
+        </header>
+        <div class="contact" id="contact"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a class="brand brand--footer" href="#topo">
+          <span class="brand__logo" id="footer-logo"></span>
+          <span class="brand__name" data-s="businessName"></span>
+        </a>
+        <p class="footer__text" data-t="footerText"></p>
+      </div>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="#servicos">Serviços</a>
+        <a href="#orcamento">Orçamento</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> <span data-s="businessName"></span>. Todos os direitos reservados.</span>
+      <span data-s="city"></span>
+    </div>
+  </footer>
+
+  <button type="button" class="wa-float" data-quote data-origin="botao-flutuante" aria-label="Solicitar orçamento pelo WhatsApp">
+    <span class="i" data-icon="wa"></span>
+  </button>
+
+  <!-- MODAL DE ORÇAMENTO -->
+  <div class="modal" id="quote-modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+      <button type="button" class="modal__close" data-close aria-label="Fechar">×</button>
+      <div class="modal__head">
+        <span class="modal__icon"><span class="i" data-icon="wa"></span></span>
+        <div>
+          <h2 id="quote-title">Solicitar orçamento</h2>
+          <p>Todos os campos são opcionais. A mensagem abre no WhatsApp para você revisar e enviar.</p>
+        </div>
+      </div>
+      <form class="form" id="modal-form" data-quote-form novalidate>
+        <div class="form__row">
+          <label>Marca do veículo
+            <input name="brand" autocomplete="off" placeholder="Ex.: Volkswagen">
+          </label>
+          <label>Modelo
+            <input name="model" autocomplete="off" placeholder="Ex.: Gol">
+          </label>
+        </div>
+        <div class="form__row">
+          <label>Ano
+            <input name="year" inputmode="numeric" maxlength="9" placeholder="Ex.: 2018">
+          </label>
+          <label>Serviço desejado
+            <select name="service"></select>
+          </label>
+        </div>
+        <details class="preview">
+          <summary>Ver mensagem que será enviada</summary>
+          <pre data-preview></pre>
+        </details>
+        <button type="submit" class="btn btn--wa btn--lg btn--block">
+          <span class="i" data-icon="wa"></span> Enviar pelo WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script id="site-data" type="application/json">{{SITE_DATA}}</script>
+  <script src="/js/site.js?v={{V}}" defer></script>
+</body>
+</html>

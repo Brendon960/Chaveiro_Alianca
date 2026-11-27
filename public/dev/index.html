@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel do desenvolvedor — Chaveiro Aliança BH</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <link rel="stylesheet" href="/dev/dev.css">
+</head>
+<body class="dev">
+  <section class="login" id="login-view" hidden>
+    <form class="login__card" id="login-form">
+      <img src="/img/favicon.svg" alt="" width="56" height="56">
+      <h1>Painel do desenvolvedor</h1>
+      <p>Acesso restrito ao perfil Desenvolvedor</p>
+      <label>Usuário <input name="username" autocomplete="username" required></label>
+      <label>Senha <input name="password" type="password" autocomplete="current-password" required></label>
+      <p class="form-error" id="login-error" hidden></p>
+      <button class="btn btn--primary btn--block" type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <section class="login" id="denied-view" hidden>
+    <div class="login__card">
+      <h1>Acesso restrito</h1>
+      <p>Esta área é exclusiva do perfil Desenvolvedor. Você está conectado com outro perfil.</p>
+      <a class="btn btn--primary btn--block" href="/admin">Ir para o painel administrativo</a>
+      <button class="btn btn--outline btn--block" type="button" id="denied-logout">Entrar com outro usuário</button>
+    </div>
+  </section>
+
+  <section class="login" id="password-view" hidden>
+    <form class="login__card" id="first-password-form">
+      <h1>Defina uma nova senha</h1>
+      <p>Por segurança, troque a senha inicial antes de continuar.</p>
+      <label>Senha atual <input name="current" type="password" autocomplete="current-password" required></label>
+      <label>Nova senha <small>(mínimo 8 caracteres)</small> <input name="next" type="password" autocomplete="new-password" minlength="8" required></label>
+      <label>Repita a nova senha <input name="confirm" type="password" autocomplete="new-password" minlength="8" required></label>
+      <p class="form-error" hidden></p>
+      <button class="btn btn--primary btn--block" type="submit">Salvar nova senha</button>
+    </form>
+  </section>
+
+  <div class="app" id="app-view" hidden>
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <img src="/img/favicon.svg" alt="" width="36" height="36">
+        <div><strong>Aliança BH</strong><span id="who">Desenvolvedor</span></div>
+      </div>
+      <nav class="sidebar__nav" id="menu">
+        <button data-view="geral" class="is-active">Visão geral</button>
+        <button data-view="logs">Logs</button>
+        <button data-view="manutencao">Manutenção</button>
+        <button data-view="conta">Minha conta</button>
+      </nav>
+      <div class="sidebar__foot">
+        <a class="btn btn--ghost btn--block" href="/" target="_blank" rel="noopener">Ver site ↗</a>
+        <a class="btn btn--ghost btn--block" href="/admin">Painel administrativo</a>
+        <button class="btn btn--link btn--block" id="logout">Sair</button>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="alert alert--danger" id="maint-alert" hidden>
+        <span><strong>Modo manutenção ativo.</strong> Os visitantes estão vendo a página de aviso.</span>
+        <button class="btn btn--sm btn--outline" data-goto="manutencao">Gerenciar</button>
+      </div>
+      <div id="view"></div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/dev/dev.js" defer></script>
+</body>
+</html>
