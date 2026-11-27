@@ -21,14 +21,6 @@ npm start
 `npm start` sobe o servidor por meio de um supervisor (`launcher.js`), que permite o botão
 "Reiniciar aplicação" do painel do desenvolvedor e reinicia o servidor se ele cair.
 
-### Acessos iniciais (troca de senha obrigatória no primeiro login)
-
-| Painel | Usuário | Senha inicial |
-|---|---|---|
-| Administrativo | `admin` | `alianca2026` |
-| Desenvolvedor | `dev` | `devalianca2026` |
-
-Para outras senhas iniciais, defina `ADMIN_PASSWORD` / `DEV_PASSWORD` antes do primeiro start.
 
 ## Painel administrativo
 
